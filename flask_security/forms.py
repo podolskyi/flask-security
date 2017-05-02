@@ -13,6 +13,7 @@
 import inspect
 
 from flask import Markup, current_app, flash, request
+from flask_babelex import lazy_gettext
 from flask_login import current_user
 from flask_wtf import FlaskForm as BaseForm
 from werkzeug.local import LocalProxy
@@ -72,7 +73,7 @@ password_length = Length(min=6, max=128, message='PASSWORD_INVALID_LENGTH')
 
 
 def get_form_field_label(key):
-    return _default_field_labels.get(key, '')
+    return lazy_gettext(_default_field_labels.get(key, ''))
 
 
 def unique_user_email(form, field):
