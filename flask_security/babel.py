@@ -7,7 +7,10 @@
 """
 
 from flask_babelex import Domain
+import pkg_resources
 from wtforms.i18n import messages_path
+
+from .utils import config_value as cv
 
 wtforms_domain = Domain(messages_path(), domain='wtforms')
 
@@ -20,3 +23,10 @@ class Translations(object):
 
     def ngettext(self, singular, plural, n):
         return wtforms_domain.ngettext(singular, plural, n)
+
+
+def _get_i18n_domain(app):
+    return Domain(
+        pkg_resources.resource_filename('flask_security', 'translations'),
+        domain='flask_security'
+    )

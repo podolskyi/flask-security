@@ -26,6 +26,7 @@ from passlib.context import CryptContext
 from werkzeug.datastructures import ImmutableList
 from werkzeug.local import LocalProxy
 
+from .babel import _get_i18n_domain
 from .forms import ChangePasswordForm, ConfirmRegisterForm, \
     ForgotPasswordForm, LoginForm, PasswordlessLoginForm, RegisterForm, \
     ResetPasswordForm, SendConfirmationForm
@@ -294,13 +295,6 @@ def _get_pwd_context(app):
         schemes=schemes,
         default=pw_hash,
         deprecated=deprecated)
-
-
-def _get_i18n_domain(app):
-    return Domain(
-        pkg_resources.resource_filename('flask_security', 'translations'),
-        domain=cv('I18N_DOMAIN', app=app)
-    )
 
 
 def _get_hashing_context(app):

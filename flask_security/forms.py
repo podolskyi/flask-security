@@ -13,13 +13,13 @@
 import inspect
 
 from flask import Markup, current_app, flash, request
-from flask_babelex import lazy_gettext
 from flask_login import current_user
 from flask_wtf import FlaskForm as BaseForm
 from werkzeug.local import LocalProxy
 from wtforms import BooleanField, Field, HiddenField, PasswordField, \
     StringField, SubmitField, ValidationError, validators
 
+from .babel import _get_i18n_domain
 from .confirmable import requires_confirmation
 from .utils import _, config_value, get_message, url_for_security, \
     validate_redirect_url, verify_and_update_password
@@ -73,7 +73,7 @@ password_length = Length(min=6, max=128, message='PASSWORD_INVALID_LENGTH')
 
 
 def get_form_field_label(key):
-    return lazy_gettext(_default_field_labels.get(key, ''))
+    return _get_i18n_domain(current_app).lazy_gettext(_default_field_labels.get(key, ''))
 
 
 def unique_user_email(form, field):
