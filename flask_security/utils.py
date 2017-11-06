@@ -364,21 +364,25 @@ def get_within_delta(key, app=None):
     return timedelta(**{values[1]: int(values[0])})
 
 
-def send_mail(subject, recipient, template, **context):
+def send_mail(subject, recipient, template, extra_headers=None, **context):
     """Send an email via the Flask-Mail extension.
 
     :param subject: Email subject
     :param recipient: Email recipient
     :param template: The name of the email template
+    :param extra_headers: Dictionary with extra headers
     :param context: The context to render the template with
     """
 
     context.setdefault('security', _security)
     context.update(_security._run_ctx_processor('mail'))
 
+    extra_headers = extra_headers or {}
+
     msg = Message(subject,
                   sender=_security.email_sender,
-                  recipients=[recipient])
+                  recipients=[recipient],
+                  extra_headers=extra_headers)
 
     ctx = ('security/email', template)
     if config_value('EMAIL_PLAINTEXT'):
