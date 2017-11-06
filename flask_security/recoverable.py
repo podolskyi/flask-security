@@ -33,8 +33,12 @@ def send_reset_password_instructions(user):
     )
 
     if config_value('SEND_PASSWORD_RESET_EMAIL'):
+        if config_value('SECURITY_EMAIL_FROM_SENDER'):
+            external_headers = {"From": config_value('SECURITY_EMAIL_FROM_SENDER')}
+        else:
+            external_headers = {}
         send_mail(config_value('EMAIL_SUBJECT_PASSWORD_RESET'), user.email,
-                  'reset_instructions',
+                  'reset_instructions', extra_headers=external_headers,
                   user=user, reset_link=reset_link)
 
     reset_password_instructions_sent.send(
@@ -48,8 +52,12 @@ def send_password_reset_notice(user):
     :param user: The user to send the notice to
     """
     if config_value('SEND_PASSWORD_RESET_NOTICE_EMAIL'):
+        if config_value('SECURITY_EMAIL_FROM_SENDER'):
+            external_headers = {"From": config_value('SECURITY_EMAIL_FROM_SENDER')}
+        else:
+            external_headers = {}
         send_mail(config_value('EMAIL_SUBJECT_PASSWORD_NOTICE'), user.email,
-                  'reset_notice', user=user)
+                  'reset_notice', extra_headers=external_headers, user=user)
 
 
 def generate_reset_password_token(user):
