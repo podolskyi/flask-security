@@ -101,9 +101,8 @@ _default_config = {
     'EMAIL_SUBJECT_CONFIRM': _('Please confirm your email'),
     'EMAIL_SUBJECT_PASSWORDLESS': _('Login instructions'),
     'EMAIL_SUBJECT_PASSWORD_NOTICE': _('Your password has been reset'),
-    'EMAIL_SUBJECT_PASSWORD_CHANGE_NOTICE': _(
-                                    'Your password has been changed'),
-    'EMAIL_SUBJECT_PASSWORD_RESET': _('Password reset instructions'),
+    'EMAIL_SUBJECT_PASSWORD_CHANGE_NOTICE': _('Confirmation of Password Reset'),
+    'EMAIL_SUBJECT_PASSWORD_RESET': _('Reset your password'),
     'EMAIL_PLAINTEXT': True,
     'EMAIL_HTML': True,
     'USER_IDENTITY_ATTRIBUTES': ['email'],
