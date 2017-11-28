@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask-Security 2.0.1\n"
 "Report-Msgid-Bugs-To: info@inveniosoftware.org\n"
-"POT-Creation-Date: 2017-11-27 16:18+0200\n"
+"POT-Creation-Date: 2017-11-28 12:36+0200\n"
 "PO-Revision-Date: 2017-05-03 08:06+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -37,7 +37,7 @@ msgstr "Votre mot de passe a été réinitialisé"
 
 #: flask_security/core.py:104
 msgid "Confirmation of Password Reset"
-msgstr ""
+msgstr "Confirmation de la réinitialisation de votre mot de passe"
 
 #: flask_security/core.py:105
 msgid "Reset your password"

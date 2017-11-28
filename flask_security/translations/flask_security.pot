@@ -1,50 +1,49 @@
-# Translations template for Flask-Security.
-# Copyright (C) 2017 CERN
-# This file is distributed under the same license as the Flask-Security
-# project.
+# Translations template for PROJECT.
+# Copyright (C) 2017 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask-Security 2.0.1\n"
-"Report-Msgid-Bugs-To: info@inveniosoftware.org\n"
-"POT-Creation-Date: 2017-04-03 08:59+0200\n"
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2017-11-28 12:36+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Generated-By: Babel 2.5.1\n"
 
-#: flask_security/core.py:98
+#: flask_security/core.py:99
 msgid "Login Required"
 msgstr ""
 
-#: flask_security/core.py:99
+#: flask_security/core.py:100
 msgid "Welcome"
 msgstr ""
 
-#: flask_security/core.py:100
+#: flask_security/core.py:101
 msgid "Please confirm your email"
 msgstr ""
 
-#: flask_security/core.py:101
+#: flask_security/core.py:102
 msgid "Login instructions"
 msgstr ""
 
-#: flask_security/core.py:102
+#: flask_security/core.py:103
 #: flask_security/templates/security/email/reset_notice.html:1
 msgid "Your password has been reset"
 msgstr ""
 
-#: flask_security/core.py:103
-msgid "Your password has been changed"
+#: flask_security/core.py:104
+msgid "Confirmation of Password Reset"
 msgstr ""
 
 #: flask_security/core.py:105
-msgid "Password reset instructions"
+msgid "Reset your password"
 msgstr ""
 
 #: flask_security/core.py:131
@@ -93,8 +92,8 @@ msgstr ""
 #: flask_security/core.py:154
 #, python-format
 msgid ""
-"You did not reset your password within %(within)s. New instructions have"
-" been sent to %(email)s."
+"You did not reset your password within %(within)s. New instructions have "
+"been sent to %(email)s."
 msgstr ""
 
 #: flask_security/core.py:157
@@ -120,8 +119,8 @@ msgstr ""
 #: flask_security/core.py:167
 #, python-format
 msgid ""
-"You did not login within %(within)s. New instructions to login have been"
-" sent to %(email)s."
+"You did not login within %(within)s. New instructions to login have been "
+"sent to %(email)s."
 msgstr ""
 
 #: flask_security/core.py:170
@@ -302,7 +301,7 @@ msgid "Welcome %(email)s!"
 msgstr ""
 
 #: flask_security/templates/security/email/login_instructions.html:3
-msgid "You can log into your through the link below:"
+msgid "You can log into your account through the link below:"
 msgstr ""
 
 #: flask_security/templates/security/email/login_instructions.html:5
